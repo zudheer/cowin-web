@@ -1,7 +1,5 @@
 var headers = ["Center"];
-var columns = [{
-    "sTitle": "Center"
-}];
+var columns = [{"sTitle": "Center"}];
 
 var d = new Date();
 var mm = (d.getMonth() + 1).toString();
@@ -20,10 +18,11 @@ $(document).ready(function() {
         });
     };
     table = $('#appointments_table').DataTable({
-        "dom": '<"top"f>rt<"bottom"ilp><"clear">',
+        "dom": '<"top"f>rt<"bottom"><"row"<"col-xs-6 col-sm-4"l><"col-xs-6 col-sm-4"i><"col-xs-6 col-sm-4;"p>><"clear">',
         "columns": columns,
         "bDestroy": true,
-        "data": [],'iDisplayLength': 100,
+        "data": [],
+        'iDisplayLength': 100,
         "language": {
             "emptyTable": "No Appointments available for your selection" //Change your default empty table message
         },
@@ -137,7 +136,9 @@ function fetch_slots(url) {
             });
             table.row.add(sessions);
         });
-        table.draw() //upda
+        table.draw() //update
+
+        $("#telegram-bot-modal").modal('show');
     });
 }
 
@@ -146,6 +147,8 @@ function open_reg() {
 };
 
 function load_initial() {
+
+    $("#telegram-bot-modal").modal('show');
     var savedSearch = localStorage.getItem("search");
     $("#saved_districts_table tbody tr").remove();
     if (savedSearch !== null) {
@@ -155,7 +158,7 @@ function load_initial() {
             $("#saved_districts_table tbody").append(newRowContent);
         });
         setTimeout(function() {
-        	$('.row_search_district')[0].click();
+            $('.row_search_district')[0].click();
         }, 2000);
     }
 }

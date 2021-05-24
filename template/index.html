@@ -12,26 +12,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
     <!-- Favicon icon -->
-    <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
-    <!-- <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon"> -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <!-- <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon"> -->
     <!-- Google font-->
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700" rel="stylesheet">
     <!-- themify -->
-    <link rel="stylesheet" type="text/css" href="/assets/css/themify-icons.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/themify-icons.css">
     <!-- iconfont -->
-    <link rel="stylesheet" type="text/css" href="/assets/css/icofont.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/icofont.css">
     <!-- simple line icon -->
-    <link rel="stylesheet" type="text/css" href="/assets/css/simple-line-icons.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/simple-line-icons.css">
     <!-- Required Fremwork -->
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" crossorigin="anonymous"> -->
-    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
     <!-- Chartlist chart css -->
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <!-- Weather css -->
     <!-- Style.css -->
-    <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
     <!-- Responsive.css-->
-    <link rel="stylesheet" type="text/css" href="/assets/css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-51ED8EJGSW"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
@@ -81,8 +81,13 @@
           <ul class="sidebar-menu">
             <li class="nav-level">--- Navigation</li>
             <li class="active treeview">
-              <a class="waves-effect waves-dark" href="index.html">
+              <a class="waves-effect waves-dark" href="#">
                 <i class="icon-speedometer"></i><span> Home</span>
+              </a>
+            </li>
+            <li class="treeview">
+              <a class="waves-effect waves-dark" href="#section_saved_search">
+                <i class="icon-speedometer"></i><span> Saved Search</span>
               </a>
             </li>
           </ul>
@@ -172,7 +177,7 @@
               </div>
             </div>
           </div>
-          <div class="col-xl-4 col-lg-12">
+          <div class="col-xl-4 col-lg-12" id="#section_saved_search">
             <div class="card">
               <div class="card-header">
                 <h5 class="card-header-text">Saved Search</h5>
@@ -226,20 +231,48 @@
       </div>
     </div>
   </div>
+  <!-- Modal -->
+<div class="modal fade" id="telegram-bot-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"><div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!-- <h5 class="modal-title">Modal title</h5> -->
+        <div class="panel-heading bg-success">You can now subscribe to appointment in telegram app.</div>
+
+      </div>
+      <div class="modal-body">
+
+      <div class="p-20 z-depth-bottom-1 waves-effect" data-toggle="tooltip" data-placement="top" title=".z-depth-bottom-1">
+        <p>Just open Cowin bot. Search By pincode or District and click Subscribe. You will be notified when vaccine is available.</p>
+          <div class="panel-body">
+
+          <a href="https://t.me/covin_sudo_bot" class="btn btn-success">Open Telegram</a>
+            <p >If clicking link doesnt work. Search for <b>covin_sudo_bot</b> in Telegram</p>
+          </div>
+      </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- </div> -->
+</div>
   <!-- Required Jqurey -->
-  <script src="/assets/js/jquery.min.js"></script>
-  <script src="/assets/js/jquery-ui.min.js"></script>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery-ui.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-  <script src="/assets/js/tether.min.js"></script>
+  <script src="assets/js/tether.min.js"></script>
   <!-- Required Fremwork -->
-  <script src="/assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
   <!-- Scrollbar JS-->
   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-  <script src="/assets/js/jquery.slimscroll.js"></script>
-  <script src="/assets/js/jquery.nicescroll.min.js"></script>
-  <script type="text/javascript" src="/assets/js/main.min.js"></script>
-  <script type="text/javascript" src="/assets/js/accordion.js"></script>
-  <script type="text/javascript" src="/assets/js/cowin.js"></script>
+  <script src="assets/js/jquery.slimscroll.js"></script>
+  <script src="assets/js/jquery.nicescroll.min.js"></script>
+  <script type="text/javascript" src="assets/js/main.min.js"></script>
+  <script type="text/javascript" src="assets/js/accordion.js"></script>
+  <script type="text/javascript" src="assets/js/cowin.js"></script>
   <script>
   var $window = $(window);
   var nav = $('.fixed-button');
