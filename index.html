@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Cowin: Search for Vaccine Appointment</title>
+    <!-- HTML5 Shim and Respond.js IE9 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <!-- Favicon icon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <!-- <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon"> -->
+    <!-- Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700" rel="stylesheet">
+    <!-- themify -->
+    <link rel="stylesheet" type="text/css" href="assets/css/themify-icons.css">
+    <!-- iconfont -->
+    <link rel="stylesheet" type="text/css" href="assets/css/icofont.css">
+    <!-- simple line icon -->
+    <link rel="stylesheet" type="text/css" href="assets/css/simple-line-icons.css">
+    <!-- Required Fremwork -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" crossorigin="anonymous"> -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <!-- Chartlist chart css -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <!-- Weather css -->
+    <!-- Style.css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <!-- Responsive.css-->
+    <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-51ED8EJGSW"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-51ED8EJGSW');
+    </script>
+    <script data-ad-client="ca-pub-1484686711344048" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  </head>
+  <body class="sidebar-mini fixed">
+    <div class="loader-bg">
+      <div class="loader-bar">
+      </div>
+    </div>
+    <div class="wrapper">
+      <!-- Navbar-->
+      <header class="main-header-top hidden-print">
+        <a href="index.html" class="logo icon-globe"><p class="img-fluid able-logo" >Cowin</p></a>
+        <nav class="navbar navbar-static-top">
+          <!-- Sidebar toggle button-->
+          <a href="#!" data-toggle="offcanvas" class="sidebar-toggle"></a>
+          <ul class="top-nav lft-nav" style="display: none;">
+            <li class="dropdown pc-rheader-submenu message-notification search-toggle">
+              <a href="#!" id="morphsearch-search" class="drop icon-circle txt-white">
+                <i class="ti-search"></i>
+              </a>
+            </li>
+          </ul>
+          <!-- Navbar Right Menu-->
+          <div class="navbar-custom-menu f-right">
+            <ul class="top-nav">
+              <!--Notification Menu-->
+              <!-- chat dropdown -->
+              <!-- window screen -->
+              <li class="pc-rheader-submenu">
+                <a href="#!" class="drop icon-circle" onclick="javascript:toggleFullScreen()">
+                  <i class="icon-size-fullscreen"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!-- Side-Nav-->
+      <aside class="main-sidebar hidden-print ">
+        <section class="sidebar" id="sidebar-scroll">
+          <!-- Sidebar Menu-->
+          <ul class="sidebar-menu">
+            <li class="nav-level">--- Navigation</li>
+            <li class="active treeview">
+              <a class="waves-effect waves-dark" href="#">
+                <i class="icon-speedometer"></i><span> Home</span>
+              </a>
+            </li>
+            <li class="treeview">
+              <a class="waves-effect waves-dark" href="#section_saved_search">
+                <i class="icon-speedometer"></i><span> Saved Search</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </aside>
+      <!-- Sidebar chat start -->
+      <!-- Sidebar chat end-->
+      <div class="content-wrapper">
+        <!-- Container-fluid starts -->
+        <!-- Main content starts -->
+        <div class="container-fluid">
+          <div class="row">
+            <div class="main-header">
+              <h4>Search for appointment</h4>
+            </div>
+          </div>
+          <!-- 4-blocks row start -->
+          <!-- 2-1 block start -->
+          <div class="row ">
+            <div class="col-xs-12 col-sm-6 col-md-8">
+              <div class="card">
+                <div class="card-block">
+                  <ul class="nav nav-tabs  tabs" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" data-toggle="tab" href="#search_box_district" role="tab">Search By District</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-toggle="tab" href="#search_box_pin" role="tab">Search By Pin</a>
+                    </li>
+                  </ul>
+                  <div class="modal-header">
+                    <div class="tab-content tabs">
+                      <div class="tab-pane active" id="search_box_district" role="tabpanel">
+                        <div id="state_search_container" class="form-inline">
+                          <div class="form-group col-xs-6  col-sm-3">
+                            <select class="js-example-basic-single col-xs-12  col-sm-12" id="states_drop_down" name="state">
+                              <option>Select a State</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-xs-6 col-sm-3">
+                            <select class="js-example-basic-single col-xs-12  col-sm-12" id="district_drop_down" name="district">
+                              <option>Select a District</option>
+                            </select>
+                          </div>
+                            &nbsp;&nbsp;
+
+                          <div class="form-group col-xs-6 col-sm-3">
+                            <button type="button" id="search_btn_district" class="btn btn-primary col-xs-12  col-sm-12">Search</button>
+                          </div>
+                          <div class="form-group col-xs-4 col-sm-2">
+                            <button type="button" id="save_search_btn" class="btn btn-success " onclick="save_search()" style="display: none;">Save Search</button>
+                          </div>
+                          <div class="form-group col-xs-6 col-sm-4">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane" id="search_box_pin" role="tabpanel">
+                        <div id="pin_search_container" class="form-inline">
+                          <div class="form-group col-xs-6 col-sm-4">
+                            <label for="inputPassword2" class="sr-only">Search by Pin</label>
+                            <input  type="number" maxlength="8" class="form-control" id="id_pincode" placeholder="Enter Pin code">
+                          </div>
+                          <div class="form-group col-xs-6 col-sm-4">
+                            <button type="button" id="search_btn_pin" class="btn btn-primary mb-2">Search</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xl-8 col-lg-12">
+            <div class="card">
+              <div class="card-block">
+                <div class="table-responsive">
+                  <table class="table m-b-0 photo-table" id="appointments_table">
+                    <thead class="thead-light">
+                    </thead>
+                    <tbody id="appointments_table_body">
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-12" id="#section_saved_search">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-header-text">Saved Search</h5>
+              </div>
+              <div class="card-block">
+                <div class="card-block accordion-block">
+                  <div class="accordion-box" id="single-open">
+                    <a class="accordion-msg">Districts</a>
+                    <div class="accordion-desc">
+                      <div class="table-wrapper-scroll-y my-custom-scrollbar">
+                        <table class="table table-bordered table-striped mb-0" id="saved_districts_table">
+                          <thead>
+                            <tr>
+                              <th scope="col">State</th>
+                              <th scope="col">District</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <a class="accordion-msg">Pincodes</a>
+                    <div class="accordion-desc">
+                      <div class="table-wrapper-scroll-y my-custom-scrollbar">
+                        <table class="table table-bordered table-striped mb-0" id="saved_pincodes_table">
+                          <thead>
+                            <tr>
+                              <th scope="col">Pincodes</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 2-1 block end -->
+      </div>
+      <!-- Main content ends -->
+      <!-- Container-fluid ends -->
+      <div class="fixed-button">
+        <a href="mailto:hello.sudodev@gmail.com" target="_blank" class="btn btn-md btn-primary">
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i> Send Feedback
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+<div class="modal fade" id="telegram-bot-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"><div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!-- <h5 class="modal-title">Modal title</h5> -->
+        <div class="panel-heading bg-success">You can now subscribe to appointment in telegram app.</div>
+
+      </div>
+      <div class="modal-body">
+
+      <div class="p-20 z-depth-bottom-1 waves-effect" data-toggle="tooltip" data-placement="top" title=".z-depth-bottom-1">
+        <p>Just open Cowin bot. Search By pincode or District and click Subscribe. You will be notified when vaccine is available.</p>
+          <div class="panel-body">
+
+          <a href="https://t.me/covin_sudo_bot" class="btn btn-success">Open Telegram</a>
+            <p >If clicking link doesnt work. Search for <b>covin_sudo_bot</b> in Telegram</p>
+          </div>
+      </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- </div> -->
+</div>
+  <!-- Required Jqurey -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery-ui.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+  <script src="assets/js/tether.min.js"></script>
+  <!-- Required Fremwork -->
+  <script src="assets/js/bootstrap.min.js"></script>
+  <!-- Scrollbar JS-->
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <script src="assets/js/jquery.slimscroll.js"></script>
+  <script src="assets/js/jquery.nicescroll.min.js"></script>
+  <script type="text/javascript" src="assets/js/main.min.js"></script>
+  <script type="text/javascript" src="assets/js/accordion.js"></script>
+  <script type="text/javascript" src="assets/js/cowin.js"></script>
+  <script>
+  var $window = $(window);
+  var nav = $('.fixed-button');
+  $window.scroll(function(){
+  if ($window.scrollTop() >= 200) {
+  nav.addClass('active');
+  }
+  else {
+  nav.removeClass('active');
+  }
+  });
+  </script>
+</body>
+</html>
